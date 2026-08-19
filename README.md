@@ -1,10 +1,6 @@
 # AegisRising
 2d indie platformer made in GameMaker
 
-# The Aegis Reach
-
-*A 2D Narrative Platformer*
-
 [![GameMaker Studio 2](https://img.shields.io/badge/Made%20with-GameMaker%20Studio%202-brightgreen)](https://gamemaker.io/)
 
 ## 📜 Story Overview
