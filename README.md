@@ -24,9 +24,9 @@ This project is a **2D platformer** focused entirely on **atmosphere, exploratio
 
 ## 👥 The Team (Summer Class)
 
-- **Ishan Muni Bajracharya:** Project Lead & Designer(Narrative Designer)
+- **Ishan Muni Bajracharya:** Project Lead 
 - **Samundra Adhakari:** 
-- **Yathechya Shrestha:** Lead Developer (GameMaker)
+- **Yathechya Shrestha:** 
 
 ## 🛠️ Technology
 
