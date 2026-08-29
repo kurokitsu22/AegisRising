@@ -1,5 +1,4 @@
 # AegisRising
-2d indie platformer made in GameMaker
 
 [![GameMaker Studio 2](https://img.shields.io/badge/Made%20with-GameMaker%20Studio%202-brightgreen)](https://gamemaker.io/)
 
@@ -9,38 +8,39 @@
 
 Humanity teeters on the edge of extinction. Driven to the brink by the **Great Devouring**—a cataclysm of behemoth creatures—the remnants of mankind follow the legendary **First Sovereign** to a natural fortress. There, they raise the **Walls of the Aegis Reach**, three concentric rings of impossible height, sealing themselves from the horrors they left behind.
 
-You play as a wanderer, an outcast—or perhaps a relic of the past—tasked with uncovering the truth behind the world's fall. This is a story of sacrifice, hubris, and the terrifying realization that even the strongest walls cannot contain the darkness within.
+You play as a wanderer, an outcast tasked with an endless flight along the perimeter of the Walls. As the environment shifts and rebuilds itself around you, you must uncover the truth behind the world's fall through fragmented lore and environmental storytelling. This is a story of sacrifice, hubris, and the terrifying realization that even the strongest walls cannot contain the darkness within.
 
 ## 🎮 Game Vision
 
-This project is a **2D platformer** focused entirely on **atmosphere, exploration, and story delivery**. 
+This project is a **2D Endless Runner** focused on **atmosphere, momentum, and narrative delivery**. 
 
-**We are a team of 3.** Our focus is on telling a rich, emotional story rather than developing complex combat systems.
+**We are a team of 3.** Our focus is on tight, responsive movement and a rich, emotional story rather than complex combat systems.
 
-- **Genre:** 2D Platformer / Atmospheric Narrative Adventure
-- **Core Mechanics:** Running, jumping, climbing, interacting with NPCs/environment, solving light platforming puzzles.
-- **Combat:** **None planned.** Encounters are narrative-driven, focusing on escape, stealth, or dialogue over fighting.
-- **Art Style:** Dark fantasy, grim, and sprawling. Emphasizing the sheer scale of the walls and the emptiness of the world.
+- **Genre:** 2D Endless Runner / Atmospheric Narrative Adventure
+- **Core Mechanics:** Auto-running, precision jumping, dashing/sliding, and interacting with environmental triggers to unlock narrative fragments.
+- **Combat:** **None.** Encounters are purely evasion-based, focusing on timing, momentum, and escaping encroaching darkness.
+- **Art Style:** Dark fantasy, grim, and sprawling. Emphasizing the sheer scale of the walls and the procedurally shifting emptiness of the world.
 
 ## 👥 The Team (Summer Class)
 
 - **Ishan Muni Bajracharya:** Project Lead 
-- **Samundra Adhakari:** 
-- **Yathechya Shrestha:** 
+- **Samundra Adhakari:** [Role, e.g., Systems & Procedural Generation]
+- **Yathechya Shrestha:** [Role, e.g., Art & Narrative Design]
 
 ## 🛠️ Technology
 
 - **Engine:** [GameMaker Studio 2](https://gamemaker.io/)
 - **Language:** GameMaker Language (GML)
+- **Architecture:** Chunk-based procedural generation utilizing object pooling to maintain a strict, low-overhead memory footprint during infinite play sessions.
 
 ## 🚧 Project Status
 
-**Phase:** Pre-Production / Storyboarding
+**Phase:** Pre-Production / Prototyping
 
 *Currently focused on:*
-- Finalizing the narrative script and level outlines.
-- Creating the core player movement mechanics in GameMaker.
-- Establishing the visual style and mood boards.
+- Finalizing the narrative script and lore fragment placement.
+- Prototyping core player movement (run, jump, dash) and the procedural chunk-spawning system in GameMaker.
+- Establishing the visual style, parallax scrolling layers, and mood boards.
 
 ## 📖 A Note from the Lore
 
@@ -51,4 +51,4 @@ This project is a **2D platformer** focused entirely on **atmosphere, exploratio
 > *And turned us back to beasts or husks,*
 > *Our souls consumed by light above.*
 
-This project is a labor of love for our small team for summer classes. We intend to explore the weight of the choices made,trying to make a decent game  and the cost of peace.
+This project is a labor of love for our small team for summer classes. We intend to explore the weight of the choices made, the cost of peace, and the relentless momentum of survival.
