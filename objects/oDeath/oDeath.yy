@@ -1,18 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"oCamera",
-  "eventList":[
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-  ],
+  "%Name":"oDeath",
+  "eventList":[],
   "managed":true,
-  "name":"oCamera",
+  "name":"oDeath",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
     "path":"folders/Objects.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"oSolid",
+    "path":"objects/oSolid/oSolid.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -30,7 +30,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"sFloorOfDeath",
+    "path":"sprites/sFloorOfDeath/sFloorOfDeath.yy",
+  },
   "spriteMaskId":null,
-  "visible":true,
+  "visible":false,
 }

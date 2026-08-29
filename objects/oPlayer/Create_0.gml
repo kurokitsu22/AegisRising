@@ -6,3 +6,5 @@ on_ground = true;
 is_dead = false;
 
 mask_index = sprite_index; 
+
+xstart = x;

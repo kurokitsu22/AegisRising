@@ -31,12 +31,9 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"Sprite18",
-    "path":"sprites/Sprite18/Sprite18.yy",
+    "name":"sFloor",
+    "path":"sprites/sFloor/sFloor.yy",
   },
-  "spriteMaskId":{
-    "name":"Sprite18",
-    "path":"sprites/Sprite18/Sprite18.yy",
-  },
+  "spriteMaskId":null,
   "visible":true,
 }

@@ -10,9 +10,14 @@ if (!is_dead) {
         vsp += grv;
     }
     
-    // 3. Horizontal Movement (Auto-run)
-    x += hsp;
-    
+		// 3. Horizontal Movement
+		if (input_right()) {
+		    x += hsp;
+		}
+
+		if (input_left()) {
+		    x -= hsp;
+		}
     // 4. Horizontal Collisions (Death if hitting a wall)
     if (place_meeting(x, y, oSolid)) {
         is_dead = true;
@@ -25,24 +30,23 @@ if (!is_dead) {
     // 5. Vertical Movement
     y += vsp;
     
-    // 6. Vertical Collisions (Landing on the floor/obstacles)
-    if (place_meeting(x, y, oSolid)) {
+    // 6. Vertical Collisions (Landing on the floor)
+    if (place_meeting(x, y, oGC)) {
         if (vsp > 0) { // Falling down
-            while(!place_meeting(x, y-1, oSolid)) {
+            while (!place_meeting(x, y - 1, oGC)) {
                 y -= 1;
             }
             vsp = 0;
             on_ground = true;
-        } else if (vsp < 0) { // Jumping up and hitting head
-            while(!place_meeting(x, y+1, oSolid)) {
+        }
+        else if (vsp < 0) { // Jumping up
+            while (!place_meeting(x, y + 1, oGC)) {
                 y += 1;
             }
             vsp = 0;
-            is_dead = true;
-            instance_destroy();
-            room_restart();
         }
-    } else {
+    }
+    else {
         on_ground = false;
     }
     

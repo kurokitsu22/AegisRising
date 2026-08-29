@@ -1,2 +1,2 @@
-spawn_x = 1000; // Start spawning ahead of the player
-floor_y = room_height - 64; // Adjust this to where your floor should sit
+spawn_x = 0; // Start spawning floor exactly at the player's position
+floor_y = 405; 
