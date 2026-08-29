@@ -23,9 +23,9 @@ This project is a **2D Endless Runner** focused on **atmosphere, momentum, and n
 
 ## 👥 The Team (Summer Class)
 
-- **Ishan Muni Bajracharya:** Project Lead 
-- **Samundra Adhakari:** [Role, e.g., Systems & Procedural Generation]
-- **Yathechya Shrestha:** [Role, e.g., Art & Narrative Design]
+- **Ishan Muni Bajracharya:** Project Lead [Art & Narrative Design]
+- **Samundra Adhakari:** 
+- **Yathechya Shrestha:** [Systems & Procedural Generation]
 
 ## 🛠️ Technology
 
