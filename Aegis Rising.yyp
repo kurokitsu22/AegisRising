@@ -30,6 +30,7 @@
     {"id":{"name":"oCamera","path":"objects/oCamera/oCamera.yy",},},
     {"id":{"name":"oFloor","path":"objects/oFloor/oFloor.yy",},},
     {"id":{"name":"oGenerator","path":"objects/oGenerator/oGenerator.yy",},},
+    {"id":{"name":"oMainMenu","path":"objects/oMainMenu/oMainMenu.yy",},},
     {"id":{"name":"oObstacle","path":"objects/oObstacle/oObstacle.yy",},},
     {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},},
     {"id":{"name":"oSolid","path":"objects/oSolid/oSolid.yy",},},

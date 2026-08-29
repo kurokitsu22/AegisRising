@@ -1,0 +1,1 @@
+menu_selected = 0;
