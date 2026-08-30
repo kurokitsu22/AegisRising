@@ -4,6 +4,11 @@ if (keyboard_check_pressed(vk_up) or keyboard_check_pressed(vk_down)) {
 }
 
 if (keyboard_check_pressed(vk_enter)) {
+    
+    // Stops ONLY the running and ambiance sounds before leaving
+    audio_stop_sound(aPlayerRunning);
+    audio_stop_sound(aForestAmbiance);
+    
     if (selected_option == 0) {
         room_restart();
     } else {
