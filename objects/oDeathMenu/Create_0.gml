@@ -1,0 +1,1 @@
+selected_option = 0; // 0 = Respawn, 1 = Main Menu
