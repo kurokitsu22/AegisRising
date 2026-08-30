@@ -1,6 +1,6 @@
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
-draw_set_font(-1);
+draw_set_font(-1); // You can change this to fScore if you want it bigger!
 
 var gw = display_get_gui_width();
 var gh = display_get_gui_height();
@@ -16,6 +16,13 @@ draw_set_alpha(1);
 // "YOU DIED"
 draw_set_color(c_red);
 draw_text_transformed(cx, cy - 120, "YOU DIED", 3, 3, 0);
+
+// --- NEW: Show Points Gained ---
+if (instance_exists(oPlayer)) {
+    draw_set_color(c_white);
+    draw_text(cx, cy - 60, "Points Gained: " + string(oPlayer.points));
+}
+// ------------------------------
 
 // Respawn button
 draw_set_color(selected_option == 0 ? c_yellow : c_white);

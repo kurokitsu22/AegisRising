@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"aMainMenuOption",
+  "%Name":"aPlayerDeathMusic",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.5546712,
+  "duration":7.8947845,
   "exportDir":"",
-  "name":"aMainMenuOption",
+  "name":"aPlayerDeathMusic",
   "parent":{
     "name":"Audio",
     "path":"folders/Audio.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"aMainMenuOption.mp3",
-  "volume":0.35,
+  "soundFile":"aPlayerDeathMusic.mp3",
+  "volume":0.1,
 }
