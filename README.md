@@ -17,14 +17,14 @@ This project is a **2D Endless Runner** focused on **atmosphere, momentum, and n
 **We are a team of 3.** Our focus is on tight, responsive movement and a rich, emotional story rather than complex combat systems.
 
 - **Genre:** 2D Endless Runner / Atmospheric Narrative Adventure
-- **Core Mechanics:** Auto-running, precision jumping.
+- **Core Mechanics:** Auto-running, precision jumping, dashing/sliding, and interacting with environmental triggers to unlock narrative fragments.
 - **Combat:** **None.** Encounters are purely evasion-based, focusing on timing, momentum, and escaping encroaching darkness.
 - **Art Style:** Dark fantasy, grim, and sprawling. Emphasizing the sheer scale of the walls and the procedurally shifting emptiness of the world.
 
 ## 👥 The Team (Summer Class)
 
 - **Ishan Muni Bajracharya:** Project Lead [Art & Narrative Design]
-- **Samundra Adhakari:** [Systems & Procedural generation debugger]
+- **Samundra Adhakari:** 
 - **Yathechya Shrestha:** [Systems & Procedural Generation]
 
 ## 🛠️ Technology
@@ -39,7 +39,7 @@ This project is a **2D Endless Runner** focused on **atmosphere, momentum, and n
 
 *Currently focused on:*
 - Finalizing the narrative script and lore fragment placement.
-- Prototyping core player movement (run, jump) and the procedural chunk-spawning system in GameMaker.
+- Prototyping core player movement (run, jump, dash) and the procedural chunk-spawning system in GameMaker.
 - Establishing the visual style, parallax scrolling layers, and mood boards.
 
 ## 📖 A Note from the Lore
