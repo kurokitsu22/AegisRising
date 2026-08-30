@@ -1,6 +1,6 @@
 {
   "$GMSound":"v2",
-  "%Name":"aMainMenu",
+  "%Name":"aMainMenuOption",
   "audioGroupId":{
     "name":"audiogroup_default",
     "path":"audiogroups/audiogroup_default",
@@ -10,9 +10,9 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":269.32825,
+  "duration":0.5546712,
   "exportDir":"",
-  "name":"aMainMenu",
+  "name":"aMainMenuOption",
   "parent":{
     "name":"Audio",
     "path":"folders/Audio.yy",
@@ -21,6 +21,6 @@
   "resourceType":"GMSound",
   "resourceVersion":"2.0",
   "sampleRate":44100,
-  "soundFile":"aMainMenu.mp3",
+  "soundFile":"aMainMenuOption.mp3",
   "volume":1.0,
 }

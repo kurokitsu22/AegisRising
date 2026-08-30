@@ -44,6 +44,7 @@
     {"id":{"name":"rStoryPoem","path":"rooms/rStoryPoem/rStoryPoem.yy",},},
     {"id":{"name":"scr_controls","path":"scripts/scr_controls/scr_controls.yy",},},
     {"id":{"name":"aMainMenu","path":"sounds/aMainMenu/aMainMenu.yy",},},
+    {"id":{"name":"aMainMenuOption","path":"sounds/aMainMenuOption/aMainMenuOption.yy",},},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},},
     {"id":{"name":"sDeath","path":"sprites/sDeath/sDeath.yy",},},
     {"id":{"name":"sDeathBall","path":"sprites/sDeathBall/sDeathBall.yy",},},
