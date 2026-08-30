@@ -8,3 +8,9 @@ is_dead = false;
 mask_index = sprite_index; 
 
 xstart = x;
+
+points = 0;
+
+running_sound_id = -1;
+audio_play_sound(aForestAmbiance, 3, true);
+
