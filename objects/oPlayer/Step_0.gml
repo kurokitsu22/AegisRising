@@ -1,76 +1,90 @@
 if (!is_dead) {
-    // 1. Handle Input (jump only — auto-runner, no manual left/right)
-    if (input_jump_pressed() && on_ground) {
-        vsp = jump_force;
-        on_ground = false;
-		audio_play_sound(aPlayerJump, 5, false);
-    }
-    // 2. Apply Gravity
-    if (!on_ground) {
-        vsp += grv;
-    }
-    // 3. Constant forward movement
-    x += hsp;
-    // 4. Horizontal Collisions (Death if hitting a wall/obstacle)
-        // 4. Horizontal Collisions (Death if hitting a wall/obstacle)
-    if (place_meeting(x, y, oSolid)) {
-        is_dead = true;
-        vsp = 0;
-        hsp = 0;
+    // 0. Pause toggle (ESC)
+    if (keyboard_check_pressed(vk_escape) && !instance_exists(oPauseMenu)) {
+        global.paused = true;
+        image_speed = 0; // freeze run animation while paused
         if (running_sound_id != -1) {
             audio_stop_sound(running_sound_id);
             running_sound_id = -1;
         }
-        audio_stop_sound(aForestAmbiance);
-        audio_play_sound(sSpikeSound, 5, false);
-        audio_play_sound(aPlayerDeathMusic, 5, false);
+        instance_create_layer(0, 0, "Instances", oPauseMenu);
+    }
 
-        // Check and save new highscore
-        if (points > global.highscore) {
-            global.highscore = points;
-            ini_open("save.ini");
-            ini_write_real("Data", "HighScore", global.highscore);
-            ini_close();
-        }
+    if (!global.paused) {
+        image_speed = 1; // restore animation on (re)entry
 
-        instance_create_layer(0, 0, "Instances", oDeathMenu);
-    }
-    // 5. Vertical Movement
-    y += vsp;
-    // 6. Vertical Collisions (Landing on the floor)
-    if (place_meeting(x, y, oGC)) {
-        if (vsp > 0) { // Falling down
-            while (!place_meeting(x, y - 1, oGC)) {
-                y -= 1;
-            }
-            vsp = 0;
-            on_ground = true;
+        // 1. Handle Input (jump only — auto-runner, no manual left/right)
+        if (input_jump_pressed() && on_ground) {
+            vsp = jump_force;
+            on_ground = false;
+            audio_play_sound(aPlayerJump, 5, false);
         }
-        else if (vsp < 0) { // Jumping up
-            while (!place_meeting(x, y + 1, oGC)) {
-                y += 1;
-            }
-            vsp = 0;
+        // 2. Apply Gravity
+        if (!on_ground) {
+            vsp += grv;
         }
-    }
-    else {
-        on_ground = false;
-    }
-    // 7. Animation + Running Sound
-    if (!on_ground) {
-        if (vsp > 0) {
-            sprite_index = sFall;
+        // 3. Constant forward movement
+        x += hsp;
+        // 4. Horizontal Collisions (Death if hitting a wall/obstacle)
+        if (place_meeting(x, y, oSolid)) {
+            is_dead = true;
+            vsp = 0;
+            hsp = 0;
+            if (running_sound_id != -1) {
+                audio_stop_sound(running_sound_id);
+                running_sound_id = -1;
+            }
+            audio_stop_sound(aForestAmbiance);
+            audio_play_sound(sSpikeSound, 5, false);
+            audio_play_sound(aPlayerDeathMusic, 5, false);
+
+            // Check and save new highscore
+            if (points > global.highscore) {
+                global.highscore = points;
+                ini_open("save.ini");
+                ini_write_real("Data", "HighScore", global.highscore);
+                ini_close();
+            }
+
+            instance_create_layer(0, 0, "Instances", oDeathMenu);
+        }
+        // 5. Vertical Movement
+        y += vsp;
+        // 6. Vertical Collisions (Landing on the floor)
+        if (place_meeting(x, y, oGC)) {
+            if (vsp > 0) { // Falling down
+                while (!place_meeting(x, y - 1, oGC)) {
+                    y -= 1;
+                }
+                vsp = 0;
+                on_ground = true;
+            }
+            else if (vsp < 0) { // Jumping up
+                while (!place_meeting(x, y + 1, oGC)) {
+                    y += 1;
+                }
+                vsp = 0;
+            }
+        }
+        else {
+            on_ground = false;
+        }
+        // 7. Animation + Running Sound
+        if (!on_ground) {
+            if (vsp > 0) {
+                sprite_index = sFall;
+            } else {
+                sprite_index = sJump;
+            }
+            if (running_sound_id != -1 && audio_is_playing(running_sound_id)) {
+                audio_stop_sound(running_sound_id);
+                running_sound_id = -1;
+            }
         } else {
-            sprite_index = sJump;
-        }
-        if (running_sound_id != -1 && audio_is_playing(running_sound_id)) {
-            audio_stop_sound(running_sound_id);
-            running_sound_id = -1;
-        }
-    } else {
-        sprite_index = sRun;
-        if (running_sound_id == -1 || !audio_is_playing(running_sound_id)) {
-            running_sound_id = audio_play_sound(aPlayerRunning, 5, true);
+            sprite_index = sRun;
+            if (running_sound_id == -1 || !audio_is_playing(running_sound_id)) {
+                running_sound_id = audio_play_sound(aPlayerRunning, 5, true);
+            }
         }
     }
 }

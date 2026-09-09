@@ -4,6 +4,7 @@ grv = 0.8;
 jump_force = -14;
 on_ground = true;
 is_dead = false;
+global.paused = false; // room (re)start always unpauses
 mask_index = sprite_index;
 xstart = x;
 points  = 0;

@@ -21,7 +21,7 @@ while (spawn_x < oPlayer.x + 1500) {
     }
     else if (roll < 0.80) {
         // FLYING obstacle — fixed height, must NOT jump into it
-        var fly_y = floor_y - 75; // tune this: higher number = higher up
+        var fly_y = floor_y - 80; // tune this: higher number = higher up
         var flyer = instance_create_layer(spawn_x, fly_y, "Instances", oDeathAir);
         flyer.image_xscale = 1.3;
         flyer.image_yscale = 1.3;
