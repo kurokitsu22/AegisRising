@@ -10,23 +10,23 @@ while (spawn_x < oPlayer.x + 1500) {
         spawn_x += floor_width;
     }
 
-    // Decide obstacle type: ground OR flying, never both at once
+    // 48% ground : 32% air = exactly 6:4, 20% empty pass
     var roll = random(1);
 
-    if (roll < 0.3) {
+    if (roll < 0.48) {
         // GROUND obstacle — sits right on the floor, must jump over
-        var block = instance_create_layer(spawn_x, floor_y - 58, "Instances", oDeath);
-        block.image_xscale = 0.5;
-        block.image_yscale = 0.5;
+        var block = instance_create_layer(spawn_x, floor_y - 60, "Instances", oDeath);
+        block.image_xscale = 1;
+        block.image_yscale = 1;
     }
-    else if (roll < 0.45) {
+    else if (roll < 0.80) {
         // FLYING obstacle — fixed height, must NOT jump into it
-        var fly_y = floor_y - 120; // tune this: higher number = higher up
-        var flyer = instance_create_layer(spawn_x, fly_y, "Instances", oDeath);
-        flyer.image_xscale = 0.5;
-        flyer.image_yscale = 0.5;
+        var fly_y = floor_y - 75; // tune this: higher number = higher up
+        var flyer = instance_create_layer(spawn_x, fly_y, "Instances", oDeathAir);
+        flyer.image_xscale = 1.3;
+        flyer.image_yscale = 1.3;
     }
-    // else: no obstacle this pass, just floor
+    // else (0.80 - 1.0): no obstacle this pass, just floor
 
     // Stretch the room width so the camera can keep scrolling right infinitely
     if (spawn_x > room_width) {

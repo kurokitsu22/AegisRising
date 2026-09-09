@@ -18,22 +18,39 @@ if (!instance_exists(oDeathMenu)) {
         
         // 2. Draw the curved black background
         draw_set_color(c_black);
-        draw_set_alpha(0.8); // 1 is fully solid, 0 is invisible. 0.8 looks nice.
+        draw_set_alpha(0.8);
         
-        // draw_roundrect_ext(x1, y1, x2, y2, xradius, yradius, outline)
         draw_roundrect_ext(
-            20 - _padding,                // x1 (left)
-            20 - _padding,                // y1 (top)
-            20 + _tw + _padding,          // x2 (right)
-            20 + _th + _padding,          // y2 (bottom)
-            8,                            // xradius (curve size)
-            8,                            // yradius (curve size)
-            false                         // false = filled in, true = outline only
+            20 - _padding,
+            20 - _padding,
+            20 + _tw + _padding,
+            20 + _th + _padding,
+            8, 8, false
         );
         
         // 3. Draw the Text
-        draw_set_alpha(1); // Reset alpha back to normal
+        draw_set_alpha(1);
         draw_set_color(c_white);
         draw_text(20, 20, _text);
+
+        // 4. Highscore box, right below the score box
+        var _hs_text = "Highscore: " + string(global.highscore);
+        var _hs_y = 20 + _th + 20; // sits below the score box with a gap
+        var _hs_tw = string_width(_hs_text);
+        var _hs_th = string_height(_hs_text);
+
+        draw_set_color(c_black);
+        draw_set_alpha(0.8);
+        draw_roundrect_ext(
+            20 - _padding,
+            _hs_y - _padding,
+            20 + _hs_tw + _padding,
+            _hs_y + _hs_th + _padding,
+            8, 8, false
+        );
+
+        draw_set_alpha(1);
+        draw_set_color(c_white);
+        draw_text(20, _hs_y, _hs_text);
     }
 }

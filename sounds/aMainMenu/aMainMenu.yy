@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":269.32825,
+  "duration":127.17569,
   "exportDir":"",
   "name":"aMainMenu",
   "parent":{

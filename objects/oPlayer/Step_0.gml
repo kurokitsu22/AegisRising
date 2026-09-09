@@ -12,6 +12,7 @@ if (!is_dead) {
     // 3. Constant forward movement
     x += hsp;
     // 4. Horizontal Collisions (Death if hitting a wall/obstacle)
+        // 4. Horizontal Collisions (Death if hitting a wall/obstacle)
     if (place_meeting(x, y, oSolid)) {
         is_dead = true;
         vsp = 0;
@@ -23,6 +24,15 @@ if (!is_dead) {
         audio_stop_sound(aForestAmbiance);
         audio_play_sound(sSpikeSound, 5, false);
         audio_play_sound(aPlayerDeathMusic, 5, false);
+
+        // Check and save new highscore
+        if (points > global.highscore) {
+            global.highscore = points;
+            ini_open("save.ini");
+            ini_write_real("Data", "HighScore", global.highscore);
+            ini_close();
+        }
+
         instance_create_layer(0, 0, "Instances", oDeathMenu);
     }
     // 5. Vertical Movement
