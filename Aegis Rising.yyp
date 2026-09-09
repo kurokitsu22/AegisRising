@@ -54,6 +54,7 @@
     {"id":{"name":"Projectile3","path":"sprites/Projectile3/Projectile3.yy",},},
     {"id":{"name":"sBackground","path":"sprites/sBackground/sBackground.yy",},},
     {"id":{"name":"sBat","path":"sprites/sBat/sBat.yy",},},
+    {"id":{"name":"sBatmove","path":"sprites/sBatmove/sBatmove.yy",},},
     {"id":{"name":"sDeath","path":"sprites/sDeath/sDeath.yy",},},
     {"id":{"name":"sDeathBall","path":"sprites/sDeathBall/sDeathBall.yy",},},
     {"id":{"name":"sFall","path":"sprites/sFall/sFall.yy",},},
